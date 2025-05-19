@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Sites',
-  tagline: 'Dinosaurs are cool',
+  title: 'Tech Journey',
+  tagline: 'A curated collection of tech guides, tutorials, and deep dives',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -131,10 +131,10 @@ const config = {
           {
             title: 'More',
             items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
+              {
+                label: 'Portfolio',
+                to: 'https://hejoseph.com',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/hejoseph',

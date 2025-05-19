@@ -2,7 +2,7 @@
   "label": "Java",
   "position": 1,
   "link": {
-    "title": "Java",
+    "type": "generated-index",
     "description": "Documentation java",
   }
 }
