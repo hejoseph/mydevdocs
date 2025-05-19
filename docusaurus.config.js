@@ -105,10 +105,10 @@ const config = {
           {
             title: 'Docs',
             items: [
-              {
-                label: 'Intro',
-                to: '/docs/intro',
-              },
+              // {
+              //   label: 'Intro',
+              //   to: '/docs/intro',
+              // },
             ],
           },
           {

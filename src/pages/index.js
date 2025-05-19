@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import styles from './index.module.css';
+import Translate, { translate } from '@docusaurus/Translate';
 
 const categories = [
   {
@@ -35,15 +36,15 @@ const categories = [
 export default function Home() {
   return (
     <Layout
-      title="Tech Knowledge Hub"
+      title={translate({ message: 'Tech Knowledge Hub' })}
       description="A curated collection of tech topics, guides, and tutorials.">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">Welcome to Tech Knowledge Hub</h1>
+          <h1 className="hero__title"><Translate>Welcome to Tech Knowledge Hub</Translate></h1>
           <p className="hero__subtitle">A curated collection of tech topics, guides, and tutorials.</p>
           <div className={styles.buttons}>
             <Link className="button button--secondary button--lg" to="/docs/category/java">
-              Browse All Topics
+              <Translate>Browse All Topics</Translate>
             </Link>
           </div>
         </div>

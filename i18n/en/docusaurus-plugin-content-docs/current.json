@@ -1,0 +1,22 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Java": {
+    "message": "Java",
+    "description": "The label for category Java in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Java.link.generated-index.description": {
+    "message": "Documentation java",
+    "description": "The generated-index page description for category Java in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tech Related": {
+    "message": "Tech Related",
+    "description": "The label for category Tech Related in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tech Related.link.generated-index.description": {
+    "message": "Tech Related Stuff",
+    "description": "The generated-index page description for category Tech Related in sidebar tutorialSidebar"
+  }
+}
