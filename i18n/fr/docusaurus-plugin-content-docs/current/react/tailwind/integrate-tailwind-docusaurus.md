@@ -4,7 +4,7 @@ sidebar_position: 2
 tags:
   - tailwindcss
 ---
-# Explication détaillée : Intégration de Tailwind CSS avec Docusaurus
+# Intégration de Tailwind CSS avec Docusaurus
 
 ## Étape 1 : Installation de Tailwind CSS et ses dépendances
 
