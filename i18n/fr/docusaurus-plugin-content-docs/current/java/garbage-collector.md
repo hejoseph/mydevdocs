@@ -8,7 +8,7 @@ tags:
 ---
 
 
-## Garbage Collection (GC) dans la JVM – Optimisation et Configuration
+# Garbage Collection (GC) dans la JVM – Optimisation et Configuration
 
 ## Objectif
 
