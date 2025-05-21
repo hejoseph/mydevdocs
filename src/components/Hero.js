@@ -26,14 +26,14 @@ const Hero = () => {
             that helps you build better software with confidence.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animation-delay-450">
-            <Link to="/dev/docs/category/java" className="px-8 py-3 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 font-medium transition-colors duration-300">
+            <Link to="./docs/category/java" className="px-8 py-3 rounded-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 font-medium transition-colors duration-300">
               View Documentation
             </Link>
             
-            <Link to="/dev/blog" className="px-8 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-colors duration-300 flex items-center justify-center">
+            {/* <Link to="/dev/blog" className="px-8 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-colors duration-300 flex items-center justify-center">
               View Blogs
+            </Link> */}
               {/* <ArrowRight className="ml-2 h-5 w-5" /> */}
-            </Link>
             
           </div>
         </div>

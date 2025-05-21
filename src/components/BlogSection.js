@@ -37,19 +37,18 @@ const BlogSection = () => {
   const blogPosts = [
     {
       id: 1,
-      title: 'Understanding Modern Authentication Flows in Web Applications',
-      excerpt: 'A comprehensive guide to OAuth 2.0, JWT tokens, and implementing secure authentication in modern web apps.',
-      date: 'May 15, 2025',
-      readTime: '8 min read',
-      category: 'Security',
-      image: 'https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      title: 'Garbage Collection (GC) in the JVM – Optimization and Configuration',
+      excerpt: 'Reduce GC (Garbage Collection) pauses in Java applications by choosing the right garbage collector (G1, ZGC, Shenandoah) and configuring the JVM to balance latency, throughput, and memory usage.',
+      category: 'Java',
+      image: './img/garbage-collector.png',
+      link: './docs/java/garbage-collector'
     },
     {
       id: 2,
       title: 'Building Scalable React Applications with TypeScript',
       excerpt: 'Learn how to structure large-scale React applications using TypeScript to improve code quality and maintainability.',
-      date: 'April 28, 2025',
-      readTime: '12 min read',
+      // date: 'April 28, 2025',
+      // readTime: '12 min read',
       category: 'React',
       image: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     },
@@ -110,25 +109,46 @@ const BlogSection = () => {
               </div>
               <div className="p-6 flex-grow">
                 <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
-                  <Calendar className="h-4 w-4 mr-1" />
-                  <span>{featuredPost.date}</span>
-                  <span className="mx-2">•</span>
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>{featuredPost.readTime}</span>
+                  {(featuredPost.date || featuredPost.readTime) && (
+                    <>
+                      {featuredPost.date && (
+                        <>
+                          <Calendar className="h-4 w-4 mr-1" />
+                          <span>{featuredPost.date}</span>
+                          
+                        </>
+                      )}
+                      {featuredPost.readTime && (
+                        <>
+                          <span className="mx-2">•</span>
+                          <Clock className="h-4 w-4 mr-1" />
+                          <span>{featuredPost.readTime}</span>
+                        </>
+                      )}
+                    </>
+                  )}
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                  {featuredPost.title}
+                  {featuredPost.link ? (
+                    <a href={featuredPost.link} className="hover:underline">
+                      {featuredPost.title}
+                    </a>
+                  ) : (
+                    <span>{featuredPost.title}</span>
+                  )}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {featuredPost.excerpt}
                 </p>
-                <a 
-                  href="#" 
-                  className="inline-flex items-center text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
-                >
-                  Read Article
-                  <ChevronRight className="ml-1 h-4 w-4" />
-                </a>
+                {featuredPost.link && (
+                  <a 
+                    href={featuredPost.link} 
+                    className="inline-flex items-center text-indigo-600 dark:text-indigo-400 font-medium hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
+                  >
+                    Read Article
+                    <ChevronRight className="ml-1 h-4 w-4" />
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -152,11 +172,21 @@ const BlogSection = () => {
                       {post.category}
                     </span>
                     <h4 className="text-sm font-semibold text-gray-800 dark:text-white mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
-                      {post.title}
+                      {post.link ? (
+                        <a href={post.link} className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                          {post.title}
+                        </a>
+                      ) : (
+                        <span>{post.title}</span>
+                      )}
                     </h4>
                     <div className="flex items-center text-xs text-gray-500 dark:text-gray-400">
-                      <Calendar className="h-3 w-3 mr-1" />
-                      <span>{post.date}</span>
+                      {post.date && (
+                        <>
+                          <Calendar className="h-3 w-3 mr-1" />
+                          <span>{post.date}</span>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -165,7 +195,7 @@ const BlogSection = () => {
 
             <div className="text-center mt-8">
               <a 
-                href="#" 
+                href="./docs/category/java" 
                 className="inline-flex items-center px-4 py-2 border border-indigo-600 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors"
               >
                 View All Articles

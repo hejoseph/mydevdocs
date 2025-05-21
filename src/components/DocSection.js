@@ -4,9 +4,9 @@ const DocSection = () => {
   
   const categories = [
     {
-      title: 'Java',
-      description: 'Tutorials, best practices, and core concepts in Java.',
-      link: '/docs/category/java',
+      title: 'NodeJs',
+      description: 'Difference Between export default and module.exports = {}.',
+      link: './docs/javascript/nodejs/export',
     },
     // {
     //   title: 'Web Development',
@@ -16,17 +16,17 @@ const DocSection = () => {
     {
       title: 'Streaming Tech',
       description: 'Explore M3U8, HLS, DASH, and other streaming formats.',
-      link: '/docs/category/tech-related',
+      link: './docs/tech-related/m3u8',
     },
     {
-      title: 'Programming Concepts',
-      description: 'Deep dives into algorithms, data structures, and patterns.',
-      link: '/docs/concepts',
+      title: 'Tailwind CSS',
+      description: 'Error at initializing Tailwind CSS.',
+      link: './docs/react/tailwind/tailwind-error',
     },
     {
-      title: 'Language Notes',
-      description: 'Insights on various programming languages and quirks.',
-      link: '/docs/language',
+      title: 'Vite',
+      description: 'Why Vite Is Used When Building a React App',
+      link: './docs/react/vite',
     },
   ];
 
