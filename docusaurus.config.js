@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Tech Journey',
   tagline: 'A curated collection of tech guides, tutorials, and deep dives',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/brand_icon.ico',
 
   // Set the production url of your site here
   url: 'https://hejoseph.com',
@@ -49,6 +49,8 @@ const config = {
             // 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
+          id: 'blog',
+          path: 'blog',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -88,6 +90,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'localeDropdown', position: 'right',
           },
